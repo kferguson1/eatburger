@@ -10,7 +10,8 @@ var app = express();
 
 //Serve static content for app from "public" directory in the app directory
 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/Public'));
+app.use(express.static("Public"));
 
 //Parse application/x-www-form-urlencoded
 
@@ -20,14 +21,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 
-//Set Handlebars.
+//Set Handlebars
 
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Import routes/give server access to routes
+// Import routes
 
 var routes = require("./controllers/burgerController");
 
