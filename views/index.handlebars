@@ -1,0 +1,57 @@
+<div class="container">
+  <!--Jumbotron-->
+  <div class="jumbotron text-center bg-success mt-2 text-white">
+    <h1 class="display-4 ml-3" id="app-title">Eat-da-Burger <img src="/Public/assets/img/eatburger.png" class="mb-2"></h1>
+    <p class="lead">What's for Dinner?</p>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card border border-primary">
+        <div class="card-header bg-primary text-white">
+         What would you Like?
+        </div>
+        <!--Create/add burger form-->
+        <div class="card-body">
+          <form class="create-form">
+            <div class="form-group">
+              <label for="burger">Begin order here:</label>
+              <input type="text" class="form-control" id="burgerToGo" placeholder="Enter your burger...">
+            </div>
+            <button class="btn btn-primary" type="submit">Place order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6 mt-2">
+      <div class="card mb-2 border border-warning">
+        <div class="card-header text-center bg-warning text-white">
+         BURGERS
+        </div>
+        <!--Div to hold burgers that have not been devoured yet-->
+        <div class="card-body mb-4">
+              {{#each burgers}}
+                {{#unless devoured}}
+                  {{> burger-block devoured=false}}
+                {{/unless}}
+              {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mt-2">
+      <div class="card mb-2 devoured-card">
+        <div class="card-header text-center text-white" id="devoured-card-header">
+         DEVOURED
+        </div>
+        <!--When a burger has been devoured, put burger here-->
+        <div class="card-body mb-4">
+          {{#each burgers}}
+              {{#if devoured}}
+                {{> burger-devoured devoured=true}}
+              {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
