@@ -3,16 +3,15 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
-//Portserver will be listening on
 
 var PORT = process.env.PORT || 8080;
 var app = express();
 
-//Serve static content for app from "public" directory in the app directory
+//Serve static content for app from "public" directory
 
 app.use(express.static('public'));
 
-//Parse application/x-www-form-urlencoded
+//Parse application/urlencoded
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
