@@ -1,5 +1,5 @@
 #devoured-card-header {
-	background-color: #8ec7e7;
+	background-color: #bd5bca;
 }
 /*Font color of devoured burger names*/
 .devoured-burger-name {
@@ -7,7 +7,7 @@
 }
 /* Use Righteous font from Google fonts*/
 body {
-	font-family: 'Raleway', serif;
+	font-family: 'Georgia', serif;
 }
 /* Font size of app title in jumbotron*/
 #app-title {
@@ -23,7 +23,7 @@ body {
 }
 /* Footer color */
 .footer-body {
-	background-color: #ca341f;
+	background-color: #1f55ca;
 }
 /*Border styling for devoured burgers card and footer */
 .devoured-card,

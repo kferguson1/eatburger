@@ -1,7 +1,7 @@
 $(function() {
-    //Click event for adding a burger.
+    //Click event for adding burger.
     $(".create-form").on("submit", function(event) {
-        // Make sure to preventDefault on a submit event.
+
         event.preventDefault();
         //Grab burger name from form field.
         //When user submits burger name, set devoured state to false.
